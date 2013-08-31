@@ -19,11 +19,11 @@ function pREQ(obj){
 
 app.get('/', function(request, response) {
   response.send(content);
-  pREQ(request);
+//  pREQ(request);
 
 });
 app.get('/*.mp3',function(request,response){
-    pREQ(request);
+  //  pREQ(request);
     var f=getFileName(request);
     response.sendfile(f);
 });

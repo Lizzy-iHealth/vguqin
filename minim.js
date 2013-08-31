@@ -19,7 +19,7 @@ function AudioPlayer(str) {
 		}else{
 		    playing = false;
 		    ended = true;
-		    println("ended");
+
 		}
 		
 	    }, false);

@@ -1,7 +1,7 @@
 {
   "name": "vguqin",
   "version": "0.0.1",
-  "description": "Simple server-side JS order processing",
+  "description": "Play Virtual Guqin On the Go",
   "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

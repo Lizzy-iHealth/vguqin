@@ -3,8 +3,10 @@ var fs = require('fs');
 var content = fs.readFileSync("index.html").toString();
 var express = require('express');
 var app = express();
+var ejs = require('ejs');
 app.use(express.logger());
 
+var indexhtml=new EJS({url:"view/index.ejs"}).render("data/title.json");
 var getFileName=function (request){
     var path =__dirname+request.path;
     return path;
@@ -18,7 +20,8 @@ function pREQ(obj){
 }
 
 app.get('/', function(request, response) {
-  response.send(content);
+	response.send(indexhtml);
+	// response.send(content);
 //  pREQ(request);
 
 });

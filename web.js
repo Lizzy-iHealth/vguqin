@@ -4,12 +4,20 @@ var content = fs.readFileSync("index.html").toString();
 var express = require('express');
 var app = express();
 var ejs = require('ejs');
-app.use(express.logger());
 
-var indexhtml=new EJS({url:"view/index.ejs"}).render("data/title.json");
+app.use(express.logger());
+app.set('views',__dirname+'/views');
+app.set('view engine','ejs');
+
+
+
 var getFileName=function (request){
     var path =__dirname+request.path;
     return path;
+}
+
+var getFileContent=function(fn){
+    return fs.readFileSync(fn).toString();
 }
 
 function prettyJSON(obj) {
@@ -19,8 +27,9 @@ function pREQ(obj){
     console.log("path is %s",obj.path);
 }
 
+var cn=JSON.parse(getFileContent("data/cn.json"));
 app.get('/', function(request, response) {
-	response.send(indexhtml);
+	response.render("index",cn);
 	// response.send(content);
 //  pREQ(request);
 

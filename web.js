@@ -28,8 +28,9 @@ function pREQ(obj){
 }
 
 var cn=JSON.parse(getFileContent("data/cn.json"));
+var en=JSON.parse(getFileContent("data/en.json"));
 app.get('/', function(request, response) {
-	response.render("index",cn);
+	response.render("index",en);
 	// response.send(content);
 //  pREQ(request);
 

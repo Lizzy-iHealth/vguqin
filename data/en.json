@@ -1,9 +1,42 @@
 {"title":"Virtual Guqin",
 "brand":"Virtual Guqin",
+"lanPath":"/cn",
+"language":"Chinese",
 "Home": "Home",
 "Play": "Play",
 "Intro":"Intro",
 "Example":"Example",
 "Order":"Order",
-"Contact":"Contact Me"
+"Contact":"Contact Me",
+"headline":"Virtual Guqin",
+"errCanvas":"Your browser does not support the canvas tag.",
+"errJS":"JavaScript is required to view the contents of this page.",
+"Introduction":"Introduction",
+"introList":
+ [
+    {"description":"Simple Mode",
+     "contentList":["Click string at left, middle or right to play different harmonics (Fanyin).","Drag across string to play open strings (Sanyin).","Drag along string at left, middle or right to play different sliding tones (Anyin)."]
+     },
+     {"description":"Full Mode",
+      "contentList":["Comming out soon..."]
+     },
+     {"description":"Melody Mode",
+      "contentList":["Depending on funding."]
+      }
+  ],
+"ExampleVideo":"Example Video",
+"videoList":[
+    {"title":"Mei Hua San Nong Harmony Theme",
+     "links":[{"host":"Youtube",
+	      "url":"https://www.youtube.com/watch?v=kCVQjTXAvEI"},
+	     {"host":"Youku",
+	      "url":"http://v.youku.com/v_show/id_XNTkzMTAzMDk2.htm"}]
+     }
+    ],
+"more":"More to come...",
+"Preorder":"Preorder",
+"PreorderText":"Preorder Virtual Guqin Native Mobil App",
+"Features":"Features:",
+"featureList":["Multi touch control.","Faster response.","Play offline"],
+"licenseInfo":"This work is licensed under the " 
 }

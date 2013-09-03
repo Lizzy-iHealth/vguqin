@@ -171,8 +171,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="#"><%= brand %></a>
-        <div class="nav-collapse collapse">
+        <a class="brand" href="#"><%= __('Virtual Guqin') %></a>
+        <a class="brand" href=<%=lanPath%> ><%=language%> </a>
+	<div class="nav-collapse collapse">
           <ul class="nav">
             <li class="active"><a href="#"><%=Home%></a></li>
             <li><a href="#qin"><%=Play%></a></li>
@@ -181,7 +182,7 @@
             <li><a href="#order"><%=Order%></a></li>
 	    <li><a href="mailto:vguqin@gmail.com"><%=Contact%></a></li>
 	    <!--  <li><a href="#faq">FAQ</a></li> -->
-
+	    
 	  </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -192,11 +193,11 @@
   <div id="content" class="container-fluid container_canvas">
     
     <canvas id="qin" data-processing-sources="qin.pde" width="1000" height="400">
-      <p>Your browser does not support the canvas tag.</p>
+      <p><%=errCanvas %></p>
       <!-- Note: you can put any alternative content here. -->
     </canvas>
     <noscript>
-      <p>JavaScript is required to view the contents of this page.</p>
+      <p><%=errJS%></p>
     </noscript>
   </div>
 
@@ -221,53 +222,55 @@
 
   <div class="row-fluid pitch">
     <div id="intro" class="span4 offset1 action">
-      <h3> Introduction</h3>
-
+      <h3><%= Introduction%></h3>
+      <% for(var i=0;i<introList.length;i++){ %>
 	<dl>
-	  <dt>Simple Mode</dt>
+	  <dt><%= introList[i].description %></dt>
 	  <dd>
 	    <ul>
-	      <li>Click string at left, middle or right to play different harmonics (Fanyin).</li>
-	      <li>Drag across string to play open strings (Sanyin).</li>
-	      <li>Drag along string at left, middle or right to play different sliding tones (Anyin).</li>
+	      <% for(var j=0;j<introList[i].contentList.length;j++){ %>
+	      <li><%=introList[i].contentList[j]%></li>
+	      <%}%>
 	    </ul>
 	  </dd>
-	  
-	  <dt>Full Mode</dt>
-	  <dd>Coming out soon...</dd>
-	  
-	  <dt>Melody Mode</dt>
-	  <dd>Depending on funding</dd>
 	</dl>
-
+	<% } %>
     </div>
     
     <div id="exapmle" class="span3 action">
-      <h3> Example Video </h3>
+      <h3><%= ExampleVideo %></h3>
       <dl>
+	<% for(var i=0;i<videoList.length;i++){ %>
 	<dt>
-	  Mei Hua San Nong Harmony Theme:
+	  <%= videoList[i].title %>
 	</dt>
 	  <dd>
 	    <ul class="inline">
-	      <li><a href="https://www.youtube.com/watch?v=kCVQjTXAvEI" title="Virtual Guqin Show">Youtube</a></li> 
-	      <li><a href="http://v.youku.com/v_show/id_XNTkzMTAzMDk2.html" title="Virtual Guqin Show">Youku</a></li>
+
+	      <% for (var j=0;j<videoList[i].links.length;j++){%>
+
+	      <li><a href= <%= videoList[i].links[j].url %> title= <%=videoList[i].title%> > <%= videoList[i].links[j].host %> </a></li> 
+
+	      <% } %>
+
 	    </ul>
 	  </dd>
+	  <% } %>
 
-	<dt>More to come...</dt>
+	<dt> <%= more %></dt>
 	
 	</dl>
     </div>
     
     <div id="order" class="span4 action">
-      <h3> Preorder </h3>
+      <h3> <%=Preorder %></h3>
       <p>
-	<a href="http://lisnju-bitstarter-mooc.herokuapp.com" title="Preorder Virtual Guqin App">Preorder Virtual Guqin Native Mobil App</a>
-	<h4> Features:</h4>
+	<a href="http://lisnju-bitstarter-mooc.herokuapp.com" title= <%=PreorderText %> ><%=PreorderText %></a>
+	<h4><%= Features %></h4>
 	<ul>
-	  <li>Multi touch control.</li>
-	  <li>Faster response.</li>
+	  <% for (var i=0;i<featureList.length;i++){ %>
+	  <li><%=featureList[i] %></li>
+	  <% } %>
 	</ul>     
       </p>
 
@@ -276,7 +279,7 @@
   </div>
   <div class="row-fluid footer">
     <div class="span12">
-      <p>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">
+      <p><%=licenseInfo %> <a href="http://creativecommons.org/licenses/by-sa/3.0/">
 	  CC By-SA 3.0
         </a> 
       </p>

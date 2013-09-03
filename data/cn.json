@@ -1,42 +1,42 @@
-{"title":"Virtual Guqin",
-"brand":"Virtual Guqin",
+{"title":"微古琴",
+"brand":"微古琴",
 "lanPath":"/en",
 "language":"English",
-"Home": "Home",
-"Play": "Play",
-"Intro":"Intro",
-"Example":"Example",
-"Order":"Order",
-"Contact":"Contact Me",
-"headline":"Virtual Guqin",
-"errCanvas":"Your browser does not support the canvas tag.",
-"errJS":"JavaScript is required to view the contents of this page.",
-"Introduction":"Introduction",
+"Home": "首页",
+"Play": "演奏",
+"Intro":"简介",
+"Example":"示例",
+"Order":"订购",
+"Contact":"联系我们",
+"headline":"微古琴",
+"errCanvas":"您的浏览器不支持 canvas 标签。",
+"errJS":"此内容需要用javascript显示。",
+"Introduction":"简介",
 "introList":
  [
-    {"description":"Simple Mode",
-     "contentList":["Click string at left, middle or right to play different harmonics (Fanyin).","Drag across string to play open strings (Sanyin).","Drag along string at left, middle or right to play different sliding tones (Anyin)."]
+    {"description":"精简模式",
+     "contentList":["分别单击琴弦的左、中、右可以演奏泛音。","垂直划过琴弦可以演奏散音。","沿着琴弦左、中、右部滑动可以演奏按音。"]
      },
-     {"description":"Full Mode",
-      "contentList":["Comming out soon..."]
+     {"description":"完整模式",
+      "contentList":["即将发布……"]
      },
-     {"description":"Melody Mode",
-      "contentList":["Depending on funding."]
+     {"description":"跟奏模式",
+      "contentList":["取决于资金募集结果。"]
       }
   ],
-"ExampleVideo":"Example Video",
+"ExampleVideo":"示例视频",
 "videoList":[
-    {"title":"Mei Hua San Nong Harmony Theme",
+    {"title":"梅花三弄泛音主题",
      "links":[{"host":"Youtube",
 	      "url":"https://www.youtube.com/watch?v=kCVQjTXAvEI"},
-	     {"host":"Youku",
+	     {"host":"优酷",
 	      "url":"http://v.youku.com/v_show/id_XNTkzMTAzMDk2.htm"}]
      }
     ],
-"more":"More to come...",
-"Preorder":"Preorder",
-"PreorderText":"Preorder Virtual Guqin Native Mobil App",
-"Features":"Features:",
-"featureList":["Multi touch control.","Faster response.","Play offline"],
-"licenseInfo":"This work is licensed under the " 
+"more":"更多视频即将发布……",
+"Preorder":"预定",
+"PreorderText":"预定微古琴的手机应用",
+"Features":"特性:",
+"featureList":["支持多点触控操作，可双手演奏。","更快的响应。","离线也可演奏。"],
+"licenseInfo":"本产品受此版权保护 " 
 }
